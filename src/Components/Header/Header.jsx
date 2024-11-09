@@ -7,16 +7,16 @@ import { MdOutlineSearch } from "react-icons/md";
 function Header() {
   const [activeTowns, setActiveTowns] = useState(false);
   const [activestudio, setActiveStudio] = useState(false);
-    const [activeModern, setActiveModern] = useState(false);
-    const activestudioLink = () => {
-      setActiveStudio(!activestudio);
-    };
-    const activeTownLink = () => {
-        setActiveTowns(!activeTowns)
-    }
-    const activeModernLink = () => {
-      setActiveModern(!activeModern);
-    };
+  const [activeModern, setActiveModern] = useState(false);
+  const activestudioLink = () => {
+    setActiveStudio(!activestudio);
+  };
+  const activeTownLink = () => {
+    setActiveTowns(!activeTowns);
+  };
+  const activeModernLink = () => {
+    setActiveModern(!activeModern);
+  };
   return (
     <header className="bg-headerColor h-screen flex items-center justify-center">
       <div className="container  mx-auto px-5">
