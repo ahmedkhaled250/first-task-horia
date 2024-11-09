@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Header from "../Header/Header"
 function Home() {
     return (
-        <div className="flex items-center justify-center bg-gray-900 text-gray-200 font-bold text-2xl h-screen">
-        <h1>Home</h1>
-        </div>
-    )
+        <>
+        <Header/>
+        </>
+    );
 }
 
 export default Home

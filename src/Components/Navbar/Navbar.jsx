@@ -18,19 +18,18 @@ function Navbar() {
 
     let classes = "text-lg duration-100 font-bold ";
     if (type == subPage) {
-        classes += "text-main";
-        console.log(classes);
-        
+      classes += "text-main";
+      console.log(classes);
     } else {
-        classes += "hover:text-main";
-        console.log(classes);
+      classes += "hover:text-main";
+      console.log(classes);
     }
     return classes;
   };
 
   return (
-    <nav className="bg-transparent px-5 py-4 flex md:block fixed-top">
-      <div className="w-[90%] mx-auto flex gap-5 lg:flex-row items-start lg:items-center justify-between">
+    <nav className="bg-transparent px-5 py-4 flex md:block absolute  top-0 left-0 w-full">
+      <div className="container  mx-auto px-5 flex gap-5 lg:flex-row items-start lg:items-center justify-between">
         <div className="">
           <NavLink className="text-main text-3xl font-bold" to="/">
             Mnawla
