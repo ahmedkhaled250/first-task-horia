@@ -7,7 +7,7 @@ import { IoStarSharp } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-function Products() {
+function RequiredProducts() {
   const [activeTab, setActiveTab] = useState("all");
   const handleTabLink = (tab) => {
     setActiveTab(tab);
@@ -305,4 +305,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default RequiredProducts;
