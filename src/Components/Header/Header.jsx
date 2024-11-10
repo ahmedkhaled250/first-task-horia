@@ -28,19 +28,16 @@ function Header() {
               <span className="text-socend"> for Every Project </span>
             </h1>
             <div className="relative py-16">
-              <div className="lg:absolute translate-x-0 w-full flex items-center justify-center gap-2 lg:gap-10 lg:w-fit px-2 lg:px-5 bg-white top-50 -translate-y-1/2 left-0 py-2 rounded-md">
-                <div className="flex flex-col items-start justify-start min-w-fit">
-                  <p className="text-[#969696] text-sm md:text-[16px]">
-                    Keyword
-                  </p>
-                  <p className="text-sm md:text-lg">Enter Keyword</p>
-                </div>
+              <div className="lg:absolute translate-x-0 w-full flex items-center justify-center gap-2 lg:gap-10 md:w-fit px-2 lg:px-5 bg-white top-50 -translate-y-1/2 left-0 py-2 rounded-md">
                 <MdOutlineSearch className="text-xl lg:text-4xl" />
                 <input
                   type="text"
                   className="outline-0 border-l-2 pl-2 lg:pl-10 text-sm lg:text-xl py-2"
                 />
                 <div className=" flex items-center gap-1 lg:gap-3">
+                  <button className="bg-transparent rounded-md text-sm lg:text-[16px] py-1 px-2 lg:px-5 border-2 hover:border-transparent hover:bg-main hover:text-white duration-300">
+                    Filter
+                  </button>
                   <button className="bg-main text-white rounded-md text-sm lg:text-[16px] py-1 px-2 lg:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
                     Search
                   </button>
