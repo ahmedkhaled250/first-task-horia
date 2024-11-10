@@ -8,7 +8,7 @@ import Membership from "../Membership/Membership";
 import Join from "../Join/Join";
 function Home() {
   return (
-    <div className="text-blackColor overflow-hidden">
+    <div className="text-blackColor">
       <Header />
       <ShopByCategory />
       <Products />
