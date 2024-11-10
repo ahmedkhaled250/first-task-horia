@@ -13,8 +13,8 @@ function Home() {
       <ShopByCategory />
       <Products />
       <RequiredProducts />
-          <Membership />
-          <Join/>
+      <Membership />
+      <Join />
       <Brands />
     </div>
   );

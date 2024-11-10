@@ -10,8 +10,8 @@ import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 function ShopByCategory() {
   return (
     <section className="py-8">
-      <div className="container mx-auto px-5">
-        <h2 className="text-center text-3xl font-bold">Shop By Category</h2>
+      <div className="container max-w-screen-xl lg:w-[90%] mx-auto px-5">
+        <h2 className="text-center text-3xl font-bold uppercase">Shop By Category</h2>
         <div className="grid grid-cols-12 mt-10">
           <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-3">
             <div className="bg-headerColor rounded-xl p-3 shadow-lg">

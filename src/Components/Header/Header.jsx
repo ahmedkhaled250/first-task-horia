@@ -19,7 +19,7 @@ function Header() {
   };
   return (
     <header className="bg-headerColor h-screen flex items-center justify-center">
-      <div className="container  mx-auto px-5">
+      <div className="container lg:w-[90%] max-w-screen-xl mx-auto px-5">
         <div className="grid grid-cols-12">
           <div className="col-span-12  flex flex-col justify-center gap-7 lg:col-span-6">
             <h1 className="text-2xl text-center font-medium lg:text-start md:font-semibold md:4xl lg:font-bold xl:text-5xl text-main">

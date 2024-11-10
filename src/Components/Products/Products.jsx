@@ -15,9 +15,9 @@ function Products() {
   return (
     <section className="py-8">
       <div className="container mx-auto px-5">
-        <div className="text-center">
-          <p className="text-main font-thin">CHECKOUT OUR NEW</p>
-          <h2 className="text-3xl font-bold mt-2">Products</h2>
+        <div className="">
+          <p className="text-main font-thin uppercase">CHECKOUT OUR NEW</p>
+          <h2 className="text-3xl font-bold mt-2 uppercase">Products</h2>
         </div>
         <ul className=" flex items-center justify-center gap-2 lg:gap-5 mt-10">
           <li>
