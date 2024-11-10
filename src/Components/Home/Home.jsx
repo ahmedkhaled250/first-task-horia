@@ -5,6 +5,7 @@ import Products from "../Products/Products";
 import RequiredProducts from "../RequiredProducts/RequiredProducts";
 import Brands from "../Brands/Brands";
 import Membership from "../Membership/Membership";
+import Join from "../Join/Join";
 function Home() {
   return (
     <div className="text-blackColor">
@@ -12,7 +13,8 @@ function Home() {
       <ShopByCategory />
       <Products />
       <RequiredProducts />
-      <Membership />
+          <Membership />
+          <Join/>
       <Brands />
     </div>
   );
