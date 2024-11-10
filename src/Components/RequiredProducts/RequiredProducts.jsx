@@ -14,7 +14,7 @@ function RequiredProducts() {
   };
   return (
     <section className="py-8">
-      <div className="container mx-auto px-5">
+      <div className="container lg:w-[90%] mx-auto px-5">
         <div className="">
           <p className="text-main font-thin uppercase">CHECKOUT OUR NEW</p>
           <h2 className="text-3xl font-bold mt-2 uppercase">most required</h2>

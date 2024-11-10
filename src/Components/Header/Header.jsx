@@ -8,6 +8,7 @@ function Header() {
   const [activeTowns, setActiveTowns] = useState(false);
   const [activestudio, setActiveStudio] = useState(false);
   const [activeModern, setActiveModern] = useState(false);
+
   const activestudioLink = () => {
     setActiveStudio(!activestudio);
   };
@@ -17,18 +18,21 @@ function Header() {
   const activeModernLink = () => {
     setActiveModern(!activeModern);
   };
+
   return (
-    <header className="bg-headerColor h-screen flex items-center justify-center">
+    <header className="bg-headerColor h-auto lg:h-screen flex items-center justify-center py-10">
       <div className="container lg:w-[90%] max-w-screen-xl mx-auto px-5">
-        <div className="grid grid-cols-12">
-          <div className="col-span-12  flex flex-col justify-center gap-7 lg:col-span-6">
-            <h1 className="text-2xl text-center font-medium lg:text-start md:font-semibold md:3xl lg:font-bold xl:text-4xl text-main">
-              <span className="text-socend"> Top Quality </span> Building
-              <br /> Materials
-              <span className="text-socend"> for Every Project </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Left Side */}
+          <div className="col-span-1 lg:col-span-6 flex flex-col justify-center gap-7">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-center lg:text-left font-medium md:font-semibold lg:font-bold text-main">
+              <span className="text-socend">Top Quality</span> Building <br />
+              Materials <span className="text-socend">for Every Project</span>
             </h1>
-            <div className="relative py-16">
-              <div className="lg:absolute flex items-center justify-center gap-2 lg:gap-10 w-fit px-2 lg:px-5 bg-white top-50 -translate-y-1/2 left-0 py-2 rounded-md">
+
+            {/* Search Section */}
+            <div className="relative py-8 lg:py-16">
+              <div className="lg:absolute flex items-center justify-center gap-2 lg:gap-10 w-fit px-4 lg:px-5 bg-white top-1/2 -translate-y-1/2 left-0 py-2 rounded-md">
                 <div className="flex flex-col items-start justify-start min-w-fit">
                   <p className="text-[#969696] text-sm md:text-[16px]">
                     Keyword
@@ -40,65 +44,64 @@ function Header() {
                   type="text"
                   className="outline-0 border-l-2 pl-2 lg:pl-10 text-sm lg:text-xl py-2"
                 />
-                <div className=" flex items-center gap-1 lg:gap-3">
-                  <button className="bg-transparent rounded-md text-sm lg:text-[16px] py-1 px-2 lg:px-5 border-2 hover:border-transparent hover:bg-main hover:text-white duration-300">
+                <div className="flex items-center gap-3">
+                  <button className="bg-transparent rounded-md text-sm lg:text-[16px] py-1 px-3 lg:px-5 border-2 hover:border-transparent hover:bg-main hover:text-white duration-300">
                     Filter
                   </button>
-                  <button className="bg-main text-white rounded-md text-sm lg:text-[16px] py-1 px-2 lg:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
+                  <button className="bg-main text-white rounded-md text-sm lg:text-[16px] py-1 px-3 lg:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
                     Search
                   </button>
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-2 ">
-              <span className="">Popular Search</span>
+
+            {/* Popular Search */}
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className="text-sm lg:text-base">Popular Search</span>
               <button
-                onClick={() => activeModernLink()}
+                onClick={activeModernLink}
                 className={`${
                   activeModern
                     ? "bg-main text-white border-none"
                     : "text-button border-2 bg-white"
-                }  rounded-3xl  hover:text-white hover:bg-main duration-300 hover:border-none text-sm  p-1`}
+                } rounded-3xl hover:text-white hover:bg-main duration-300 hover:border-none text-sm lg:text-base p-2`}
               >
                 Modern Villa
               </button>
               <button
-                onClick={() => activestudioLink()}
+                onClick={activestudioLink}
                 className={`${
                   activestudio
                     ? "bg-main text-white border-none"
                     : "text-button border-2 bg-white"
-                } rounded-3xl  hover:text-white hover:bg-main duration-300 hover:border-none text-sm  p-1`}
+                } rounded-3xl hover:text-white hover:bg-main duration-300 hover:border-none text-sm lg:text-base p-2`}
               >
                 Studio Apartment
               </button>
               <button
-                onClick={() => activeTownLink()}
+                onClick={activeTownLink}
                 className={`${
                   activeTowns
                     ? "bg-main text-white border-none"
                     : "text-button border-2 bg-white"
-                } rounded-3xl  hover:text-white hover:bg-main duration-300 hover:border-none text-sm  p-1`}
+                } rounded-3xl hover:text-white hover:bg-main duration-300 hover:border-none text-sm lg:text-base p-2`}
               >
                 Town House
               </button>
             </div>
           </div>
+
+          {/* Right Side - Images */}
           <div className="hidden lg:block lg:col-span-6">
-            <div className="flex items-center mt-16">
-              <div className="w-1/2 pt-16">
+            <div className="flex flex-wrap mt-8 lg:mt-16">
+              <div className="w-full lg:w-1/2 lg:pr-4 mb-4 lg:mb-0">
                 <img src={header1} className="w-full" alt="Header 1" />
               </div>
-              <div className="w-1/2  flex flex-col">
-                <div className="flex-none">
-                  <img src={header2} className="w-full" alt="Header 2" />
-                </div>
-                <div className="flex-none">
-                  <img src={header3} className="w-full" alt="Header 3" />
-                </div>
+              <div className="w-full lg:w-1/2 flex flex-col gap-4">
+                <img src={header2} className="w-full" alt="Header 2" />
+                <img src={header3} className="w-full" alt="Header 3" />
               </div>
             </div>
-            {/* <img className="w-full" src={mainImage} alt="mainImage" /> */}
           </div>
         </div>
       </div>
