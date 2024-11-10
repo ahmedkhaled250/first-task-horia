@@ -4,7 +4,7 @@ import join from "../../assets/join/join.svg";
 function Join() {
   return (
     <section className="shadow-lg">
-      <div className="grid grid-cols-12 px-5 sm:px-10">
+      <div className="grid grid-cols-12 px-5 sm:px-10 lg:px-0">
         {/* Left Side (Image) */}
         <div className="hidden lg:block lg:col-span-6">
           <img src={join} alt="join" className="w-full h-auto" />

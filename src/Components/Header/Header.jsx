@@ -32,7 +32,7 @@ function Header() {
 
             {/* Search Section */}
             <div className="relative py-8 lg:py-16">
-              <div className="lg:absolute flex items-center justify-center gap-2 lg:gap-10 w-fit px-4 lg:px-5 bg-white top-1/2 -translate-y-1/2 left-0 py-2 rounded-md">
+              <div className="absolute flex items-center justify-center gap-2 lg:gap-10 w-full max-w-md px-4 lg:px-5 bg-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-2 rounded-md">
                 <div className="flex flex-col items-start justify-start min-w-fit">
                   <p className="text-[#969696] text-sm md:text-[16px]">
                     Keyword
