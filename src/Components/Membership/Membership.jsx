@@ -7,7 +7,7 @@ import connect from "../../assets/Membership/connect.svg";
 function Membership() {
   return (
     <section className="py-8 bg-headerColor">
-      <div className="w-[80%] mx-auto px-5 ">
+      <div className=" container lg:w-[80%] mx-auto px-5 ">
         <div className="text-socend text-center text-sm w-full lg:w-2/3 lg:mx-auto">
           <h3 className="text-2xl mb-2">
             Register your membership <br /> and start advertising now
