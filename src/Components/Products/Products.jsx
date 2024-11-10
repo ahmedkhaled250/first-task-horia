@@ -6,6 +6,7 @@ import paints from "../../assets/products/paints.svg";
 import { IoStarSharp } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { FaRegHeart } from "react-icons/fa";
 
 function Products() {
   const [activeTab, setActiveTab] = useState("all");
@@ -75,7 +76,10 @@ function Products() {
           {activeTab === "all" && (
             <div className="grid grid-cols-12 mt-10">
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={light} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -102,7 +106,10 @@ function Products() {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={iron} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -126,7 +133,10 @@ function Products() {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={paints} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -152,7 +162,10 @@ function Products() {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={cement} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -181,7 +194,10 @@ function Products() {
           {activeTab === "paints" && (
             <div className="grid grid-cols-12 mt-10">
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={paints} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -211,7 +227,10 @@ function Products() {
           {activeTab === "lighting" && (
             <div className="grid grid-cols-12 mt-10">
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={light} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -242,7 +261,10 @@ function Products() {
           {activeTab === "iron" && (
             <div className="grid grid-cols-12 mt-10">
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={iron} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
@@ -270,7 +292,10 @@ function Products() {
           {activeTab === "cement" && (
             <div className="grid grid-cols-12 mt-10">
               <div className="col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 p-5">
-                <div className="rounded-xl p-3 bg-white shadow-md">
+                <div className="rounded-xl p-3 bg-white shadow-md relative">
+                  <Link className="absolute top-5 right-5 p-2 rounded-full text-white bg-main ">
+                    <FaRegHeart className="text-sm" />
+                  </Link>
                   <img src={cement} alt="light" className="w-full" />
                   <div className="flex justify-between items-center py-3">
                     <div className="">
