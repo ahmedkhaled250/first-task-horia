@@ -31,7 +31,7 @@ function Navbar() {
     <nav className="bg-transparent px-5 py-4 flex md:block absolute  top-0 left-0 w-full">
       <div className="container  mx-auto px-5 flex gap-5 lg:flex-row items-start lg:items-center justify-between">
         <div className="">
-          <NavLink className="text-main text-3xl font-bold" to="/">
+          <NavLink className="text-main text-xl md:text-3xl font-bold" to="/">
             Mnawla
           </NavLink>
           <ul
@@ -156,14 +156,14 @@ function Navbar() {
           </li>
         </ul>
         <div className=" flex items-center gap-3">
-          <button className="bg-main text-white rounded-md py-1 px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
+          <button className="bg-main text-white rounded-md py-1 px-3 md:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
             Sign In
           </button>
-          <button className="bg-transparent text-main rounded-md py-1 px-5 border-2 border-main hover:border-transparent hover:bg-main hover:text-white duration-300">
+          <button className="bg-transparent text-main rounded-md py-1 px-3 md:px-5 border-2 border-main hover:border-transparent hover:bg-main hover:text-white duration-300">
             Register
           </button>
           <button className="lg:hidden" onClick={() => toggleNavbar()}>
-            <VscThreeBars className="text-4xl" />
+            <VscThreeBars className="text-3xl" />
           </button>
         </div>
       </div>
