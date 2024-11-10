@@ -28,7 +28,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-headerColor px-5 py-4 flex md:block  top-0 left-0 w-full">
+    <nav className="bg-headerColor px-5 py-4 flex md:block absolute bg-opacity-80 z-40 top-0 left-0 w-full">
       <div className="container  mx-auto px-5 flex gap-5 lg:flex-row items-start lg:items-center justify-between">
         <div className="">
           <NavLink className="text-main text-xl md:text-3xl font-bold" to="/">
@@ -94,6 +94,13 @@ function Navbar() {
                 Contact
               </NavLink>
             </li>
+
+            <button className="lg:hidden bg-main text-white rounded-md py-1 px-3 md:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
+              Sign In
+            </button>
+            <button className="lg:hidden bg-transparent text-main rounded-md py-1 px-3 md:px-5 border-2 border-main hover:border-transparent hover:bg-main hover:text-white duration-300">
+              Register
+            </button>
           </ul>
         </div>
         <ul
@@ -155,17 +162,17 @@ function Navbar() {
             </NavLink>
           </li>
         </ul>
-        <div className=" flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <button className="bg-main text-white rounded-md py-1 px-3 md:px-5 border-2 border-transparent hover:bg-[#fdb446] duration-300">
             Sign In
           </button>
           <button className="bg-transparent text-main rounded-md py-1 px-3 md:px-5 border-2 border-main hover:border-transparent hover:bg-main hover:text-white duration-300">
             Register
           </button>
-          <button className="lg:hidden" onClick={() => toggleNavbar()}>
-            <VscThreeBars className="text-3xl" />
-          </button>
         </div>
+        <button className="lg:hidden" onClick={() => toggleNavbar()}>
+          <VscThreeBars className="text-3xl" />
+        </button>
       </div>
     </nav>
   );

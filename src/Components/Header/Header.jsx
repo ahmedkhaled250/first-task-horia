@@ -30,7 +30,7 @@ function Header() {
             <div className="py-5 lg:py-16">
               <label className="text-lg md:hidden">Enter Keyword</label>
               <div className="relative">
-                <div className="lg:absolute translate-x-0 w-fit flex items-center justify-center gap-2 lg:gap-10 px-2 lg:px-5 bg-white top-0 left-0 py-2 rounded-md">
+                <div className="lg:absolute translate-x-0 w-fit flex items-center justify-center gap-2 lg:gap-10 px-2 lg:px-5 bg-white top-0 lg:top-1/2 lg:-translate-y-1/2 left-0 py-2 rounded-md">
                   <div className="hidden md:flex flex-col items-start justify-start min-w-fit">
                     <p className="text-[#969696] text-sm md:text-[16px]">
                       Keyword
@@ -55,14 +55,14 @@ function Header() {
               </div>
             </div>
             <div className="flex items-center gap-2 ">
-              <span className="">Popular Search</span>
+              <span>Popular Search</span>
               <button
                 onClick={() => activeModernLink()}
                 className={`${
                   activeModern
                     ? "bg-main text-white border-none"
                     : "text-button border-2 bg-white"
-                }  rounded-3xl  hover:text-white hover:bg-main duration-300 hover:border-none text-sm  p-1`}
+                }  rounded-3xl hover:text-white hover:bg-main duration-300 hover:border-none text-sm p-1`}
               >
                 Modern Villa
               </button>
