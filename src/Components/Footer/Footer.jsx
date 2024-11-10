@@ -85,7 +85,7 @@ function Footer() {
           <div className="col-span-12 my-3 md:col-span-5  lg:col-span-12 xl:col-span-2">
             <form
               action=""
-              className="flex md:block lg:flex justify-start lg:justify-center items-center gap-5 xl:block"
+              className="block lg:flex justify-start lg:justify-center items-center gap-5 xl:block"
             >
               <label className="text-xl font-bold">Join Newsletter</label>
               <div className="flex mt-4">
