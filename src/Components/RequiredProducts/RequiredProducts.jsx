@@ -25,7 +25,7 @@ function RequiredProducts() {
               onClick={() => handleTabLink("all")}
               className={`${
                 activeTab === "all" ? "text-white bg-main" : "bg-gray-300"
-              }  py-2 px-10 rounded-xl`}
+              }  py-2 px-3 lg:px-5 rounded-lg`}
             >
               All
             </button>
@@ -35,7 +35,7 @@ function RequiredProducts() {
               onClick={() => handleTabLink("cement")}
               className={`${
                 activeTab === "cement" ? "text-white bg-main" : "bg-gray-300"
-              }  py-2 px-10 rounded-xl`}
+              }  py-2 px-3 lg:px-5 rounded-lg`}
             >
               Cement
             </button>
@@ -45,7 +45,7 @@ function RequiredProducts() {
               onClick={() => handleTabLink("iron")}
               className={`${
                 activeTab === "iron" ? "text-white bg-main" : "bg-gray-300"
-              }  py-2 px-10 rounded-xl`}
+              }  py-2 px-3 lg:px-5 rounded-lg`}
             >
               Iron
             </button>
@@ -55,7 +55,7 @@ function RequiredProducts() {
               onClick={() => handleTabLink("paints")}
               className={`${
                 activeTab === "paints" ? "text-white bg-main" : "bg-gray-300"
-              }  py-2 px-10 rounded-xl`}
+              }  py-2 px-3 lg:px-5 rounded-lg`}
             >
               Paints
             </button>
@@ -65,7 +65,7 @@ function RequiredProducts() {
               onClick={() => handleTabLink("lighting")}
               className={`${
                 activeTab === "lighting" ? "text-white bg-main" : "bg-gray-300"
-              }  py-2 px-10 rounded-xl`}
+              }  py-2 px-3 lg:px-5 rounded-lg`}
             >
               Lighting
             </button>
