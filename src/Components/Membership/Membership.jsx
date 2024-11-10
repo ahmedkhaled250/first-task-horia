@@ -20,7 +20,7 @@ function Membership() {
         <div className=" flex gap-10 lg:gap-0 flex-col items-center justify-center lg:grid grid-cols-12 my-10">
           <div className="w-1/2 lg:col-span-2">
                       <img src={AddFriend} className="w-full md:w-1/2 lg:w-full mx-auto" alt="AddFriend" />
-            <p className="text-lg font-semibold text-center text-socend">
+            <p className="text-lg font-semibold text-center mt-4 text-socend">
               Register your membership
             </p>
           </div>
@@ -32,7 +32,7 @@ function Membership() {
           <div className="w-1/2 lg:col-span-1"></div>
           <div className="w-1/2 lg:col-span-2">
             <img src={Vector} className="w-full md:w-1/2 lg:w-full mx-auto" alt="Vector" />
-            <p className="text-lg font-semibold text-center text-socend">
+            <p className="text-lg font-semibold text-center mt-4 text-socend">
               Add your ads
             </p>
           </div>
@@ -44,7 +44,7 @@ function Membership() {
           <div className="w-1/2 lg:col-span-1"></div>
           <div className="w-1/2 lg:col-span-2">
             <img src={connect} className="w-full md:w-1/2 lg:w-full mx-auto" alt="connect" />
-            <p className="text-lg font-semibold text-center text-socend">
+            <p className="text-lg font-semibold text-center mt-4 text-socend">
               Connect with clients
             </p>
           </div>
