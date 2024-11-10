@@ -33,7 +33,7 @@ function Header() {
                   <p className="text-[#969696] text-sm md:text-[16px]">Keyword</p>
                   <p className="text-sm md:text-lg">Enter Keyword</p>
                 </div>
-                <MdOutlineSearch className="text-4xl" />
+                <MdOutlineSearch className="text-xl lg:text-4xl" />
                 <input
                   type="text"
                   className="outline-0 border-l-2 pl-2 lg:pl-10 text-sm lg:text-xl py-2"
