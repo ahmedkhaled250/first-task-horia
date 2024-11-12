@@ -1,9 +1,9 @@
 import React from "react";
-import Maintenance from "../../assets/ShopByCategory/maintenance.svg";
-import Modernization from "../../assets/ShopByCategory/Modernization.svg";
-import Rent from "../../assets/ShopByCategory/Rent.svg";
-import Transportation from "../../assets/ShopByCategory/transportation.svg";
-import Tires from "../../assets/ShopByCategory/Tires.svg";
+import Maintenance from "../../../assets/ShopByCategory/maintenance.svg";
+import Modernization from "../../../assets/ShopByCategory/Modernization.svg";
+import Rent from "../../../assets/ShopByCategory/Rent.svg";
+import Transportation from "../../../assets/ShopByCategory/transportation.svg";
+import Tires from "../../../assets/ShopByCategory/Tires.svg";
 import { Link } from "react-router-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 

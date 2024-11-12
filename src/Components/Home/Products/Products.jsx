@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import cement from "../../assets/products/cement.svg";
-import iron from "../../assets/products/iron.svg";
-import light from "../../assets/products/light.svg";
-import paints from "../../assets/products/paints.svg";
+import cement from "../../../assets/products/cement.svg";
+import iron from "../../../assets/products/iron.svg";
+import light from "../../../assets/products/light.svg";
+import paints from "../../../assets/products/paints.svg";
 import { IoStarSharp } from "react-icons/io5";
 import { BsCart2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 
-function RequiredProducts() {
+function Products() {
   const [activeTab, setActiveTab] = useState("all");
   const handleTabLink = (tab) => {
     setActiveTab(tab);
@@ -18,7 +18,7 @@ function RequiredProducts() {
       <div className="container lg:w-[90%] mx-auto px-5">
         <div className="">
           <p className="text-main font-thin uppercase">CHECKOUT OUR NEW</p>
-          <h2 className="text-3xl font-bold mt-2 uppercase">most required</h2>
+          <h2 className="text-3xl font-bold mt-2 uppercase">Products</h2>
         </div>
         <ul className=" flex items-center justify-center gap-2 lg:gap-5 mt-10">
           <li>
@@ -330,4 +330,4 @@ function RequiredProducts() {
   );
 }
 
-export default RequiredProducts;
+export default Products;

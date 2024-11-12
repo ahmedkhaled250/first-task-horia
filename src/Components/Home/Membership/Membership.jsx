@@ -1,9 +1,9 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
-import AddFriend from "../../assets/Membership/AddFriend.svg";
-import Vector from "../../assets/Membership/Vector.svg";
-import connect from "../../assets/Membership/connect.svg";
+import AddFriend from "../../../assets/Membership/AddFriend.svg";
+import Vector from "../../../assets/Membership/Vector.svg";
+import connect from "../../../assets/Membership/connect.svg";
 function Membership() {
   return (
     <section className="py-8 bg-headerColor">

@@ -4,14 +4,10 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { RiInstagramLine } from "react-icons/ri";
-import mainFooter from "../../assets/mainFooter.jpeg"; // Import the image properly
 
 function Footer() {
   return (
-    <footer
-      style={{ backgroundImage: `url(${mainFooter})` }}
-      className="bg-headerColor bg-cover bg-center text-white"
-    >
+    <footer className="bg-headerColor">
       <div className="px-5 container lg:w-[80%] max-w-screen-xl mx-auto py-10">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 my-3 md:col-span-8 lg:col-span-4 xl:col-span-4 ">
@@ -22,16 +18,16 @@ function Footer() {
               amet, sectetur adipisicing elit, sed do eiusmod
             </p>
             <div className="flex items-center gap-3">
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white hover:bg-blackColor duration-300">
                 <FaFacebookSquare />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white hover:bg-blackColor duration-300">
                 <FaTwitter />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white hover:bg-blackColor duration-300">
                 <FaLinkedinIn />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white hover:bg-blackColor duration-300">
                 <RiInstagramLine />
               </Link>
             </div>

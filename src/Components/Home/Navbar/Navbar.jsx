@@ -28,7 +28,7 @@ function Navbar() {
   };
 
   return (
-    <nav className=" text-white px-5 py-4 flex absolute top-0 z-20 md:block left-0 w-full">
+    <nav className="bg-headerColor px-5 py-4 flex md:block absolute z-40 top-0 left-0 w-full">
       <div className="container  mx-auto px-5 flex gap-5 lg:flex-row items-start lg:items-center justify-between">
         <div className="">
           <NavLink className="text-main text-xl md:text-3xl font-bold" to="/">

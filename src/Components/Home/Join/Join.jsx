@@ -1,5 +1,5 @@
 import React from "react";
-import join from "../../assets/join/join.svg";
+import join from "../../../assets/join/join.svg";
 
 function Join() {
   return (
