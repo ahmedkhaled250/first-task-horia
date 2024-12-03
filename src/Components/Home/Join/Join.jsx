@@ -16,7 +16,7 @@ function Join() {
             Join
           </h3>
           <form
-            className="text-socend gap-y-6 grid grid-cols-12 w-full"
+            className="text-socend gap-y-6 lg:gap-y-0 gap-x-4 grid grid-cols-12 w-full"
             onSubmit={(e) => e.preventDefault()}
           >
             {/* First Column: First Name and Email */}
@@ -60,14 +60,14 @@ function Join() {
             </div>
 
             {/* Third Column: Choose and Submit Button */}
-            <div className="col-span-12 lg:col-span-6 flex flex-col gap-4 md:flex-row items-start md:items-center lg:items-start justify-start md:justify-center lg:justify-start">
+            <div className="col-span-12 lg:col-span-6 flex flex-col gap-4 lg:gap-0 md:flex-row items-start md:items-end lg:flex-col lg:items-start justify-start md:justify-center lg:justify-start">
               <div className="w-full md:w-1/2 lg:w-full">
                 <label className="font-medium text-sm md:text-base">
                   Choose
                 </label>
                 <select
                   id="select"
-                  className="mt-1 mb-3 bg-white font-medium outline-none shadow-2xl py-2 px-3 w-full"
+                  className="mt-1 mb-3  md:mb-0 lg:mb-3 bg-white font-medium outline-none shadow-2xl py-2 px-3 w-full"
                 >
                   <option value="" disabled>
                     Select an option

@@ -6,12 +6,9 @@ import RequiredProducts from "./RequiredProducts/RequiredProducts";
 import Brands from "./Brands/Brands";
 import Membership from "./Membership/Membership";
 import Join from "./Join/Join";
-import Footer from "./Footer/Footer";
-import Navbar from "./Navbar/Navbar";
 function Home() {
   return (
     <div className="text-blackColor overflow-hidden">
-      <Navbar/>
       <Header />
       <ShopByCategory />
       <Products />
@@ -19,7 +16,6 @@ function Home() {
       <Membership />
       <Join />
       <Brands />
-      <Footer/>
     </div>
   );
 }

@@ -4,14 +4,10 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { RiInstagramLine } from "react-icons/ri";
-import mainFooter from "../../assets/mainFooter.jpeg"; // Import the image properly
 
 function Footer() {
   return (
-    <footer
-      style={{ backgroundImage: `url(${mainFooter})` }}
-      className="bg-headerColor bg-cover bg-center text-white"
-    >
+    <footer className="bg-headerColor">
       <div className="px-5 container lg:w-[80%] max-w-screen-xl mx-auto py-10">
         <div className="grid grid-cols-12 gap-5">
           <div className="col-span-12 my-3 md:col-span-8 lg:col-span-4 xl:col-span-4 ">
@@ -22,16 +18,16 @@ function Footer() {
               amet, sectetur adipisicing elit, sed do eiusmod
             </p>
             <div className="flex items-center gap-3">
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white  outline-none hover:bg-blackColor duration-300">
                 <FaFacebookSquare />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white  outline-none hover:bg-blackColor duration-300">
                 <FaTwitter />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white  outline-none hover:bg-blackColor duration-300">
                 <FaLinkedinIn />
               </Link>
-              <Link className="p-2 rounded-full border-2 border-blackColor hover:border-main hover:bg-main duration-300">
+              <Link className="p-2 rounded-full border-2 border-blackColor hover:text-white  outline-none hover:bg-blackColor duration-300">
                 <RiInstagramLine />
               </Link>
             </div>
@@ -42,22 +38,28 @@ function Footer() {
             </h5>
             <ul className="text-lg flex flex-col gap-2 mt-5">
               <li>
-                <Link className="hover:text-main hover:underline duration-100">
+                <Link
+                  to="/about"
+                  className="hover:text-main hover:underline outline-none duration-100"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-main hover:underline duration-100">
+                <Link className="hover:text-main hover:underline outline-none duration-100">
                   Career
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-main hover:underline duration-100">
+                <Link
+                  to="/contact"
+                  className="hover:text-main hover:underline outline-none duration-100"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-main hover:underline duration-100">
+                <Link className="hover:text-main hover:underline outline-none duration-100">
                   FAQ
                 </Link>
               </li>
@@ -100,7 +102,7 @@ function Footer() {
                   className="outline-none bg-white rounded-l-full teext-lg py-2 pr-6 pl-4"
                   placeholder="Your email"
                 />
-                <button className="rounded-full bg-main text-white py-2 px-4 text-lg -translate-x-5 font-semibold">
+                <button className="rounded-full  outline-none bg-main text-white py-2 px-4 text-lg -translate-x-5 font-semibold">
                   Submit
                 </button>
               </div>
