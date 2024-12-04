@@ -114,13 +114,14 @@ function Navbar() {
   return (
     <nav className={`px-5 py-4 flex md:block w-full bg-white`}>
       <div className="container mx-auto px-5 flex gap-5 lg:flex-row items-start lg:items-center justify-between">
-        {pathname.includes("subcategory") ? (
+        {/* {pathname.includes("subcategory") ? (
           <Subcategory />
         ) : pathname.includes("brand") ? (
           <Brand />
         ) : (
           pathname.includes("category") && <Category />
-        )}
+        )} */}
+              <h2 className="text-xl">Welcome, Dashboard</h2>
 
         <div className="size-12 rounded-full overflow-hidden">
           <img src={avatar} alt="avatar" />

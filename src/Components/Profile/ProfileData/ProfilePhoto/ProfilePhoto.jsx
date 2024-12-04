@@ -70,7 +70,7 @@ function ProfilePhoto() {
 
   return (
     <>
-      {!userData.image?.secure_url ? (
+      {!userData?.image?.secure_url ? (
         <Skeleton className="w-full h-96 my-5 rounded-none" />
       ) : (
         <label

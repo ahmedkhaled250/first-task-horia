@@ -4,6 +4,7 @@ import logo2 from "../../../assets/dashboard/logo2.png"
 import logo3 from "../../../assets/dashboard/logo3.png"
 import logo4 from "../../../assets/dashboard/logo4.png"
 import logo5 from "../../../assets/dashboard/logo5.png"
+import imageRate from "../../../assets/dashboard/Group 19.png"
 import { FaChevronDown, FaRegStar, FaStar } from 'react-icons/fa'
 function Dashboard() {
 
@@ -103,6 +104,11 @@ function Dashboard() {
                 {displayRating(0)}
               </p>
               <p className="font-medium text-black">Overall Rating</p>
+            </div>
+          </div>
+          <div className="col-span-3">
+            <div className="size-full flex items-end">
+              <img src={imageRate} className='w-full' alt="imageRate" />
             </div>
           </div>
         </div>

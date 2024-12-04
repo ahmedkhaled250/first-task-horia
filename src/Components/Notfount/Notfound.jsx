@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Notfound() {
   return (
     <>
-      <Header nameComponent="404 - Not Found" header="404"/>
+      {/* <Header nameComponent="404 - Not Found" header="404"/> */}
       <section className="py-10 flex flex-col gap-5 items-center justify-center text-center h-screen">
         <img src={notfoundImage} alt="notfoundImage" className="h-2/3" />
         <h3 className="text-2xl font-semibold">Oops! Page Not found.</h3>

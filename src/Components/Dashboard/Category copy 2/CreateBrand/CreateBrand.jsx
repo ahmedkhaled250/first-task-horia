@@ -79,6 +79,8 @@ function CreateBrand() {
         onSubmit={formik.handleSubmit}
         className={`flex flex-col w-2/3 mx-auto mt-14 `}
       >
+        <h3 className="mb-3 text-2xl font-bold">Create brand</h3>
+
         <div className="w-full">
           <label className="font-medium text-black" htmlFor="arName">
             Name in Arabic

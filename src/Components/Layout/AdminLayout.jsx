@@ -9,9 +9,11 @@ function AdminLayout() {
   const { profile, setUserData, setToken } = useContext(UserContext);
   const navigate = useNavigate();
   const getUserProfile = async () => {
+    // setIsLoading(true);
     const result = await profile();
 
     if (result.data?.user) {
+      // setIsLoading(false);
       setUserData(result.data.user);
     }
     if (result?.response?.data?.errMass == "TokenExpiredError: jwt expired") {

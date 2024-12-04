@@ -428,9 +428,7 @@ const {baseUrl} = useContext(UserContext)
 
               {err ? (
                 <div
-                  className={`${
-                    formik.isValid ? "" : "mb-2"
-                  } rounded-md text-red-400 text-lg font-medium px-3 w-full`}
+                  className={`mb-2 rounded-md text-red-400 text-lg font-medium px-3 w-full`}
                 >
                   {err}
                 </div>

@@ -63,52 +63,52 @@ function CreateSubcategory() {
       .max(50, "the maxlength of user name is 20"),
   });
 
-const addSubcategory = async (values) => {
-  setIsLoading(true);
+  const addSubcategory = async (values) => {
+    setIsLoading(true);
 
-  // Check if there's a category selected
-  if (!categoryValue?.categoryId) {
-    setCategoryError("You've to choose a specific category");
-    setIsLoading(false);
-    return;
-  }
+    // Check if there's a category selected
+    if (!categoryValue?.categoryId) {
+      setCategoryError("You've to choose a specific category");
+      setIsLoading(false);
+      return;
+    }
 
-  console.log("Form data to be submitted:", values);
+    console.log("Form data to be submitted:", values);
 
-  try {
-    const { data } = await axios.post(
-      `${baseUrl}/category/${categoryValue.categoryId}/subcategory`,
-      values,
-      {
-        headers: {
-          "Content-Type": "application/json", // Ensure correct content type
-          authorization: `Hamada__${token}`,
-        },
+    try {
+      const { data } = await axios.post(
+        `${baseUrl}/category/${categoryValue.categoryId}/subcategory`,
+        values,
+        {
+          headers: {
+            "Content-Type": "application/json", // Ensure correct content type
+            authorization: `Hamada__${token}`,
+          },
+        }
+      );
+
+      if (data.message === "Done") {
+        setIsLoading(false);
+        setErr(null);
+        // Optionally redirect after successful submission
+        // navigate("/some-page");
+      } else {
+        setIsLoading(false);
+        setErr(data.errMass);
       }
-    );
-
-    if (data.message === "Done") {
+    } catch (err) {
       setIsLoading(false);
-      setErr(null);
-      // Optionally redirect after successful submission
-      // navigate("/some-page");
-    } else {
-      setIsLoading(false);
-      setErr(data.errMass);
+      if (err?.response?.data?.errMass === "TokenExpiredError: jwt expired") {
+        localStorage.clear();
+        setToken(null);
+        setUserData(null);
+        navigate("/login");
+      } else {
+        console.log(err.response.data);
+        setErr(err.response.data.errMass);
+      }
     }
-  } catch (err) {
-    setIsLoading(false);
-    if (err?.response?.data?.errMass === "TokenExpiredError: jwt expired") {
-      localStorage.clear();
-      setToken(null);
-      setUserData(null);
-      navigate("/login");
-    } else {
-      console.log(err.response.data);
-      setErr(err.response.data.errMass);
-    }
-  }
-};
+  };
 
   const formik = useFormik({
     initialValues,
@@ -122,6 +122,7 @@ const addSubcategory = async (values) => {
         onSubmit={formik.handleSubmit}
         className={`flex flex-col w-2/3 mx-auto mt-14 `}
       >
+        <h3 className="mb-3 text-2xl font-bold">Create subcategory</h3>
         <div className="w-full">
           <label className="font-medium text-black" htmlFor="arName">
             Name in Arabic

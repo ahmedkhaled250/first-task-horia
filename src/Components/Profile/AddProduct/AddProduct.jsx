@@ -119,20 +119,20 @@ function AddProduct() {
         "In-valid image",
         (value) => value && ["image/png", "image/jpeg"].includes(value.type)
       ),
-    subImages: Yup.mixed()
-      .test("FILE_TYPE", "Invalid image format", (value) => {
-        if (!value) return true; // If no file is provided, return true (make it optional)
-        return ["image/png", "image/jpeg"].includes(value.type); // Validate file type if provided
-      })
-      .nullable(),
   });
+
+  function validateImageFormat(image) {
+    const validTypes = ["image/jpeg", "image/png", "image/jpg"];
+    if (!validTypes.includes(image.type)) {
+      return false;
+    }
+    return true;
+  }
 
   async function addProduct(values) {
     setIsLoading(true);
     if (brandError || categoryError || subcategoryError) {
-      console.log(0);
       setIsLoading(false);
-
       return 0;
     }
     const {
@@ -147,6 +147,8 @@ function AddProduct() {
       subImages,
     } = values;
     if (!mainImage) {
+      console.log("main");
+
       setIsLoading(false);
       return 0;
     }
@@ -168,7 +170,25 @@ function AddProduct() {
     formData.append("price", price);
     discound && formData.append("discound", discound);
     formData.append("mainImage", mainImage);
-    subImages?.length > 0 && formData.append("subImages", subImages);
+    if (subImages?.length > 0) {
+      for (let i = 0; i < subImages.length; i++) {
+        const image = subImages[i];
+        if (!validateImageFormat(image)) {
+          setSubImagesErr(
+            "Invalid image format. Only JPG, JPEG, and PNG are allowed."
+          );
+          setIsLoading(false);
+          return 0;
+        }
+      }
+console.log(subImages);
+
+      // Append images to FormData if validation passes
+      subImages.forEach((image, index) => {
+        formData.append(`subImages`, image);
+      });
+    }
+console.log("form data", formData);
 
     const { data } = await axios
       .post(`${baseUrl}/product`, formData, {
@@ -185,6 +205,8 @@ function AddProduct() {
           setUserData(null);
           navigate("/login");
         } else {
+          console.log(err.response.data);
+
           setErr(err.response.data.errMass);
         }
       });
@@ -204,6 +226,8 @@ function AddProduct() {
     if (!brandValue?.brandId) {
       setBrandError("You've to choose a specific brand");
     }
+    console.log("kgvbkjul");
+    console.log(formik.errors);
   };
 
   const handleFileChange = (event) => {

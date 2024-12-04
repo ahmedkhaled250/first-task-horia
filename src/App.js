@@ -1,5 +1,5 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React, { useContext, useEffect } from 'react';
+import { createBrowserRouter, RouterProvider, useParams } from "react-router-dom";
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
@@ -11,13 +11,13 @@ import BusinessRegister from './Components/BusinessRegister/BusinessRegister';
 import IndividualRegister from './Components/IndividualRegister/IndividualRegister';
 import CustomerRegister from './Components/CustomerRegister/CustomerRegister';
 import Login from './Components/Login/Login';
-import UserContextProvider from './Context/UserContext';
+import UserContextProvider, { UserContext } from './Context/UserContext';
 import Products from './Components/Products/Products';
 import Profile from './Components/Profile/Profile';
 import AdminProfile from './Components/Dashboard/Profile/Profile';
 import ProfileData from './Components/Profile/ProfileData/ProfileData';
 import Wishlist from './Components/Profile/Wishlist/Wishlist';
-import { ProtectedAuthRoute, ProtectedRoute } from './Components/ProtectedRoute/ProtectedRoute';
+import { ProtectedAdminRoute, ProtectedAuthRoute, ProtectedRoute } from './Components/ProtectedRoute/ProtectedRoute';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import Dashboard from './Components/Profile/Dashboard/Dashboard';
 import AdminDashboard from './Components/Dashboard/Dashboard';
@@ -39,8 +39,13 @@ import CreateSubcategory from './Components/Dashboard/Category copy/CreateSubcat
 import AdminBrand from './Components/Dashboard/Category copy 2/Brand';
 import CreateBrand from './Components/Dashboard/Category copy 2/CreateBrand/CreateBrand';
 import UpdateBrand from './Components/Dashboard/Category copy 2/UpdateBrand/UpdateBrand';
+import TraderRequests from './Components/Dashboard/Trader/Trader';
+import TraderDetails from './Components/Dashboard/TraderDetails/TraderDetails';
+import ProductRequests from './Components/Dashboard/ProductRequests/ProductRequests';
+import ProductRequestDetails from './Components/Dashboard/ProductRequestDetails/ProductRequestDetails';
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/", element: <Layout />, children: [
@@ -78,25 +83,29 @@ function App() {
         { path: "*", element: <Notfound /> },
       ]
     }, {
-      path: "/dashboard", element: <AdminLayout />, children: [
+      path: "/dashboard", element: <ProtectedAdminRoute><AdminLayout /></ProtectedAdminRoute>, children: [
         {
           index: true, element: <AdminProfile />
         },
         {
-          path: "category", element: <AdminCategory />
+          path: "category", element: <CreateCategory />
         },
-        { path: "addcategory", element: <CreateCategory /> },
-        { path: "updatecategory", element: <UpdateCategory /> },
+        // { path: "addcategory", element:  },
+        // { path: "updatecategory", element: <UpdateCategory /> },
         {
-          path: "subcategory", element: <AdminSubcategory />
+          path: "subcategory", element: < CreateSubcategory />
         },
-        { path: "addsubcategory", element: < CreateSubcategory/> },
-        { path: "updatesubcategory", element: <UpdateSubcategory /> },
+        // { path: "addsubcategory", element:  },
+        // { path: "updatesubcategory", element: <UpdateSubcategory /> },
         {
-          path: "brand", element: <AdminBrand />
+          path: "brand", element: <CreateBrand /> 
         },
-        { path: "addbrand", element: <CreateBrand /> },
-        { path: "updatebrand", element: <UpdateBrand /> },
+        // { path: "addbrand", element: },
+        // { path: "updatebrand", element: <UpdateBrand /> },
+        { path: "traderRequests", element: <TraderRequests /> },
+        { path: "traderDetails/:id", element: <TraderDetails /> },
+        { path: "productRequests", element: <ProductRequests /> },
+        { path: "productRequestDetails/:id", element: <ProductRequestDetails /> },
         { path: "*", element: <Notfound /> },
       ]
     },

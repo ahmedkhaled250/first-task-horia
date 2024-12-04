@@ -6,7 +6,7 @@ function UserContextProvider(props) {
     const [token, setToken] = useState(localStorage.getItem("Token"))
     const [userData, setUserData] = useState({});
     // https://manawlaapi.mubasher.com.eg
-    const [baseUrl, setBaseUrl] = useState("http://localhost:5000");
+    const [baseUrl, setBaseUrl] = useState("https://manawlaapi.mubasher.com.eg");
     const [avatar, setAvatar] = useState(avatarPhoto);
     const profile = async () => {
         return axios.get(`${baseUrl}/user/profile`, {

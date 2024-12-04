@@ -73,8 +73,8 @@ function CreateCategory() {
         },
       })
       .catch((err) => {
-          setIsLoading(false);
-          
+        setIsLoading(false);
+
         if (err?.response?.data?.errMass == "TokenExpiredError: jwt expired") {
           localStorage.clear();
           setToken(null);
@@ -106,6 +106,7 @@ function CreateCategory() {
         onSubmit={formik.handleSubmit}
         className={`flex flex-col w-2/3 mx-auto mt-14 `}
       >
+        <h3 className="mb-3 text-2xl font-bold">Create category</h3>
         <div className="w-full">
           <label className="font-medium text-black" htmlFor="arName">
             Name in Arabic

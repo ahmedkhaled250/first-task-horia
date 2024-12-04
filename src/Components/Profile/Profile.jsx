@@ -1,11 +1,39 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 function Profile() {
   const { pathname } = useLocation();
-  const { userData, avatar } = useContext(UserContext);
+  const { userData, avatar, profile, setUserData, setToken } =
+    useContext(UserContext);
   const [isOpened, setIsOpened] = useState(false);
+
+  const navigate = useNavigate();
+  const getUserProfile = async () => {
+    // setIsLoading(true);
+    const result = await profile();
+
+    if (result.data?.user) {
+      // setIsLoading(false);
+      setUserData(result.data.user);
+    }
+    if (result?.response?.data?.errMass == "TokenExpiredError: jwt expired") {
+      localStorage.clear();
+      setToken(null);
+      setUserData(null);
+      navigate("/login");
+    }
+  };
+
+  useEffect(() => {
+     getUserProfile();
+  }, []);
 
   const activeLinkClasses = ({ type = "profile" } = {}) => {
     let subPage;
@@ -98,11 +126,14 @@ function Profile() {
                 {userData.role == "Individual" ||
                 userData.role == "Business" ? (
                   <li className="py-2">
-                    <NavLink
-                      onClick={() => setIsOpened(!isOpened)}
+                    <a
+                      onClick={(e) => {
+                        setIsOpened(!isOpened);
+                        e.preventDefault();
+                      }}
                       className={`${activeLinkClasses({
                         type: "product",
-                      })} px-2 lg:px-5 pb-3  outline-none after:w-full after:h-1 after:duration-700 after:bg-main relative after:absolute after:bottom-0 after:left-0`}
+                      })} px-2 lg:px-5 pb-3 cursor-pointer select-none  outline-none after:w-full after:h-1 after:duration-700 after:bg-main relative after:absolute after:bottom-0 after:left-0`}
                     >
                       Product
                       <div
@@ -117,19 +148,13 @@ function Profile() {
                           add
                         </NavLink>
                         <NavLink
-                          to="updateProduct"
-                          className="py-1 rounded-md cursor-pointer text-main hover:text-white hover:bg-main font-medium duration-300"
-                        >
-                          update
-                        </NavLink>
-                        <NavLink
                           to="myProducts"
                           className="py-1 rounded-md cursor-pointer text-main hover:text-white hover:bg-main font-medium duration-300"
                         >
                           display
                         </NavLink>
                       </div>
-                    </NavLink>
+                    </a>
                   </li>
                 ) : (
                   ""
